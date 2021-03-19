@@ -1,0 +1,30 @@
+package university.selectioncommittee.entity.subdivision;
+
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import university.selectioncommittee.entity.base.TimedEntity;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.Table;
+
+@Getter
+@Setter
+@NoArgsConstructor
+@AllArgsConstructor
+
+@Entity
+@Table(name = "vuz")
+public class VUZ extends TimedEntity{
+
+    @Column(name = "title", nullable = false)
+    private String title;
+
+    @Column(name = "short_title", nullable = false)
+    private String shortTitle;
+
+    @Column(name = "address", nullable = false)
+    private String address;
+}
