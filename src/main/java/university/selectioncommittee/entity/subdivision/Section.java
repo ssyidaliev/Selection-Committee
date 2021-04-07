@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -21,10 +22,12 @@ import javax.persistence.JoinColumn;
 @Table(name = "section")
 public class Section extends TimedEntity{
 
-    @Column(name = "title", nullable = false)
+    @NotNull
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "short_title", nullable = false)
+    @NotNull
+    @Column(name = "short_title")
     private String shortTitle;
 
     @ManyToOne

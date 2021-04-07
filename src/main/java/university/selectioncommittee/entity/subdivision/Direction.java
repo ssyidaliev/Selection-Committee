@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import javax.persistence.Table;
 import javax.persistence.ManyToOne;
 import javax.persistence.JoinColumn;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -21,13 +22,16 @@ import javax.persistence.JoinColumn;
 @Table(name = "direction")
 public class Direction extends TimedEntity {
 
-    @Column(name = "cipher", nullable = false)
+    @NotNull
+    @Column(name = "cipher")
     private String cipher;
 
-    @Column(name = "title", nullable = false)
+    @NotNull
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "short_title", nullable = false)
+    @NotNull
+    @Column(name = "short_title")
     private String shortTitle;
 
     @ManyToOne

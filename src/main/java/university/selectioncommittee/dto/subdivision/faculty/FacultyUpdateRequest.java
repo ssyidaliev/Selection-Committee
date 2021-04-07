@@ -11,5 +11,5 @@ public class FacultyUpdateRequest {
     private Long id;
     private String title;
     private String shortTitle;
-    private VUZ vuz;
+    private Long vuzId;
 }

@@ -1,0 +1,17 @@
+package university.selectioncommittee.dto.locations.addressliving;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class AddressLivingUpdateRequest {
+
+    private Long id;
+    private String republic;
+    private String region;
+    private String district;
+    private String city;
+    private String village;
+    private String phone;
+}

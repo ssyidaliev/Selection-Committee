@@ -9,6 +9,7 @@ import university.selectioncommittee.entity.base.TimedEntity;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Table;
+import javax.validation.constraints.NotNull;
 
 @Getter
 @Setter
@@ -19,12 +20,15 @@ import javax.persistence.Table;
 @Table(name = "vuz")
 public class VUZ extends TimedEntity{
 
-    @Column(name = "title", nullable = false)
+    @NotNull
+    @Column(name = "title")
     private String title;
 
-    @Column(name = "short_title", nullable = false)
+    @NotNull
+    @Column(name = "short_title")
     private String shortTitle;
 
-    @Column(name = "address", nullable = false)
+    @NotNull
+    @Column(name = "address")
     private String address;
 }

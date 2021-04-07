@@ -1,6 +1,7 @@
 package university.selectioncommittee.endpoint.subdvision.impl;
 
 import lombok.NonNull;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import university.selectioncommittee.dto.subdivision.vuz.VuzCreateRequest;
 import university.selectioncommittee.dto.subdivision.vuz.VuzResponse;
@@ -12,6 +13,7 @@ import university.selectioncommittee.service.subdivision.VuzService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class VuzEndpointImpl implements VuzEndpoint {
 
     private final VuzService vuzService;
