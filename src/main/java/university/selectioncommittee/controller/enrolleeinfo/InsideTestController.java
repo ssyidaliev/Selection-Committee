@@ -6,9 +6,6 @@ import org.springframework.web.bind.annotation.*;
 import university.selectioncommittee.dto.enrolleeinfo.insidetest.InsideTestCreateRequest;
 import university.selectioncommittee.dto.enrolleeinfo.insidetest.InsideTestResponse;
 import university.selectioncommittee.dto.enrolleeinfo.insidetest.InsideTestUpdateRequest;
-import university.selectioncommittee.dto.enrolleeinfo.military.MilitaryCreateRequest;
-import university.selectioncommittee.dto.enrolleeinfo.military.MilitaryResponse;
-import university.selectioncommittee.dto.enrolleeinfo.military.MilitaryUpdateRequest;
 import university.selectioncommittee.endpoint.enrolleinfo.InsideTestEndpoint;
 
 import java.util.List;
