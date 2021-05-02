@@ -22,7 +22,7 @@ public class EnrollmentDateCreateRequest {
     private boolean paid;
     private boolean confirmEnrollment;
     private LocalDate confirmDate;
-    private String enrollment;
+    private boolean enrollment;
     private String orderNum;
     private LocalDate orderDate;
     private String protocolNum;

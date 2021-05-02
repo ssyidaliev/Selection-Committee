@@ -11,4 +11,5 @@ public interface DirectionEndpoint {
     DirectionResponse update(Long id, DirectionUpdateRequest request);
     DirectionResponse getById(Long id);
     List<DirectionResponse> getAll();
+    List<DirectionResponse> getAllByFaculty(Long facultyId);
 }

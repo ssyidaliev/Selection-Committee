@@ -36,11 +36,9 @@ public class EnrollmentDate extends TimedEntity {
     @Column(name = "recommended")
     private boolean recommended;
 
-    @NotNull
     @Column(name = "protocol")
     private String protocol;
 
-    @NotNull
     @Column(name = "recommended_date")
     private LocalDate recommendedDate;
 
@@ -52,27 +50,22 @@ public class EnrollmentDate extends TimedEntity {
     @Column(name = "confirm_enrollment")
     private boolean confirmEnrollment;
 
-    @NotNull
     @Column(name = "confirm_date")
     private LocalDate confirmDate;
 
     @NotNull
     @Column(name = "enrollment")
-    private String enrollment;
+    private boolean enrollment;
 
-    @NotNull
     @Column(name = "order_num")
     private String orderNum;
 
-    @NotNull
     @Column(name = "order_date")
     private LocalDate orderDate;
 
-    @NotNull
     @Column(name = "protocol_num")
     private String protocolNum;
 
-    @NotNull
     @Column(name = "protocol_date")
     private LocalDate protocolDate;
 
@@ -80,7 +73,6 @@ public class EnrollmentDate extends TimedEntity {
     @Column(name = "took_docs")
     private boolean tookDocs;
 
-    @NotNull
     @Column(name = "took_docs_date")
     private LocalDate tookDocsDate;
 

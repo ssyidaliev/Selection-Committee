@@ -60,4 +60,10 @@ public class DirectionServiceImpl implements DirectionService {
     public List<Direction> list() {
         return directionRepository.findAll();
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<Direction> listByFaculty(@NonNull Long facultyId) {
+        return directionRepository.findAllByFacultyId(facultyId);
+    }
 }

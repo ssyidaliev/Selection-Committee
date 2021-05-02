@@ -25,7 +25,7 @@ public class EnrollmentDateServiceImpl implements EnrollmentDateService {
 
     @Override
     @Transactional
-    public EnrollmentDate create(@NonNull EnrollmentDateCreateRequest request, @NonNull Direction direction) {
+    public EnrollmentDate create(EnrollmentDateCreateRequest request, @NonNull Direction direction) {
         EnrollmentDate enrollmentDate = new EnrollmentDate();
         enrollmentDate.setDayForm(request.isDayForm());
         enrollmentDate.setLanguagesRus(request.isLanguagesRus());
@@ -36,7 +36,7 @@ public class EnrollmentDateServiceImpl implements EnrollmentDateService {
         enrollmentDate.setPaid(request.isPaid());
         enrollmentDate.setConfirmEnrollment(request.isConfirmEnrollment());
         enrollmentDate.setConfirmDate(request.getConfirmDate());
-        enrollmentDate.setEnrollment(request.getEnrollment());
+        enrollmentDate.setEnrollment(request.isEnrollment());
         enrollmentDate.setOrderNum(request.getOrderNum());
         enrollmentDate.setOrderDate(request.getOrderDate());
         enrollmentDate.setProtocolNum(request.getProtocolNum());
@@ -50,7 +50,7 @@ public class EnrollmentDateServiceImpl implements EnrollmentDateService {
 
     @Override
     @Transactional
-    public EnrollmentDate put(@NonNull Long id, @NonNull EnrollmentDateUpdateRequest request, @NonNull Direction direction) {
+    public EnrollmentDate put(@NonNull Long id, EnrollmentDateUpdateRequest request, @NonNull Direction direction) {
         EnrollmentDate enrollmentDate = retrieve(id);
         enrollmentDate.setDayForm(request.isDayForm());
         enrollmentDate.setLanguagesRus(request.isLanguagesRus());
@@ -61,7 +61,7 @@ public class EnrollmentDateServiceImpl implements EnrollmentDateService {
         enrollmentDate.setPaid(request.isPaid());
         enrollmentDate.setConfirmEnrollment(request.isConfirmEnrollment());
         enrollmentDate.setConfirmDate(request.getConfirmDate());
-        enrollmentDate.setEnrollment(request.getEnrollment());
+        enrollmentDate.setEnrollment(request.isEnrollment());
         enrollmentDate.setOrderNum(request.getOrderNum());
         enrollmentDate.setOrderDate(request.getOrderDate());
         enrollmentDate.setProtocolNum(request.getProtocolNum());

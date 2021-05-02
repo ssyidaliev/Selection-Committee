@@ -12,4 +12,5 @@ public interface SectionService {
     Section put(Long id, SectionUpdateRequest request, Direction direction);
     Section retrieve(Long id);
     List<Section> list();
+    List<Section> listByFaculty(Long directionId);
 }

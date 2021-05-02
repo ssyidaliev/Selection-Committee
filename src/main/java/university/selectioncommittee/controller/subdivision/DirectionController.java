@@ -35,6 +35,11 @@ public class DirectionController {
         return ResponseEntity.status(HttpStatus.OK).body(directionEndpoint.getById(id));
     }
 
+    @GetMapping(path = "/faculty/{facultyId}")
+    public ResponseEntity<List<DirectionResponse>> listByFaculty(@PathVariable Long facultyId) {
+        return ResponseEntity.status(HttpStatus.OK).body(directionEndpoint.getAllByFaculty(facultyId));
+    }
+
     @GetMapping
     public ResponseEntity<List<DirectionResponse>> list() {
         return ResponseEntity.status(HttpStatus.OK).body(directionEndpoint.getAll());

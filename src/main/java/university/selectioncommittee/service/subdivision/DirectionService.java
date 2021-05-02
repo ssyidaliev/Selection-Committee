@@ -12,4 +12,5 @@ public interface DirectionService {
     Direction put(Long id, DirectionUpdateRequest request, Faculty faculty);
     Direction retrieve(Long id);
     List<Direction> list();
+    List<Direction> listByFaculty(Long facultyId);
 }

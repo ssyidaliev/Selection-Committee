@@ -6,11 +6,7 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import university.selectioncommittee.entity.base.TimedEntity;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Table;
-import javax.persistence.ManyToOne;
-import javax.persistence.JoinColumn;
+import javax.persistence.*;
 import javax.validation.constraints.NotNull;
 
 @Getter

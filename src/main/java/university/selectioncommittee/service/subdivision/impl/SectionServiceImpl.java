@@ -58,4 +58,9 @@ public class SectionServiceImpl implements SectionService {
     public List<Section> list() {
         return sectionRepository.findAll();
     }
+
+    @Override
+    public List<Section> listByFaculty(@NonNull Long directionId) {
+        return sectionRepository.findAllByDirectionId(directionId);
+    }
 }

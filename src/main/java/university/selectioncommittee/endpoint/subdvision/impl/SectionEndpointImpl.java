@@ -56,4 +56,13 @@ public class SectionEndpointImpl implements SectionEndpoint {
                 .map(sectionMapper::toSectionResponse)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<SectionResponse> getAllByDirection(@NonNull Long directionId) {
+        return sectionService.listByFaculty(directionId)
+                .stream()
+                .map(sectionMapper::toSectionResponse)
+                .collect(Collectors.toList());
+    }
 }

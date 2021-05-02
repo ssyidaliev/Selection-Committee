@@ -1,6 +1,7 @@
 package university.selectioncommittee.endpoint.users.impl;
 
 import lombok.NonNull;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import university.selectioncommittee.dto.users.parent.ParentCreateRequest;
 import university.selectioncommittee.dto.users.parent.ParentResponse;
@@ -14,6 +15,7 @@ import university.selectioncommittee.service.users.ParentService;
 import java.util.List;
 import java.util.stream.Collectors;
 
+@Service
 public class ParentEndpointImpl implements ParentEndpoint {
 
     private final ParentMapper parentMapper;

@@ -56,4 +56,13 @@ public class DirectionEndpointImpl implements DirectionEndpoint {
                 .map(directionMapper::toDirectionResponse)
                 .collect(Collectors.toList());
     }
+
+    @Override
+    @Transactional(readOnly = true)
+    public List<DirectionResponse> getAllByFaculty(@NonNull Long facultyId) {
+        return directionService.listByFaculty(facultyId)
+                .stream()
+                .map(directionMapper::toDirectionResponse)
+                .collect(Collectors.toList());
+    }
 }

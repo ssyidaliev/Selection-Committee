@@ -30,14 +30,14 @@ public class EnrollmentDateEndpointImpl implements EnrollmentDateEndpoint {
 
     @Override
     @Transactional
-    public EnrollmentDateResponse add(@NonNull EnrollmentDateCreateRequest request) {
+    public EnrollmentDateResponse add(EnrollmentDateCreateRequest request) {
         Direction direction = directionService.retrieve(request.getDirectionId());
         return enrollmentDateMapper.toEnrollmentDateResponse(enrollmentDateService.create(request, direction));
     }
 
     @Override
     @Transactional
-    public EnrollmentDateResponse update(@NonNull Long id, @NonNull EnrollmentDateUpdateRequest request) {
+    public EnrollmentDateResponse update(@NonNull Long id, EnrollmentDateUpdateRequest request) {
         Direction direction = directionService.retrieve(request.getDirectionId());
         return enrollmentDateMapper.toEnrollmentDateResponse(enrollmentDateService.put(id, request, direction));
     }

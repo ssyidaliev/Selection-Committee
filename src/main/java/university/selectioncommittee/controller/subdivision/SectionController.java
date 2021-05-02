@@ -35,8 +35,15 @@ public class SectionController {
         return ResponseEntity.status(HttpStatus.OK).body(sectionEndpoint.getById(id));
     }
 
+    @GetMapping(path = "/direction/{directionId}")
+    public ResponseEntity<List<SectionResponse>> listByDirection(@PathVariable Long directionId) {
+        return ResponseEntity.status(HttpStatus.OK).body(sectionEndpoint.getAllByDirection(directionId));
+    }
+
     @GetMapping
     public ResponseEntity<List<SectionResponse>> list() {
         return ResponseEntity.status(HttpStatus.OK).body(sectionEndpoint.getAll());
     }
+
+
 }

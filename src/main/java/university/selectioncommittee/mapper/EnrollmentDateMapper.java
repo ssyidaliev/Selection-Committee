@@ -20,7 +20,7 @@ public class EnrollmentDateMapper {
                 .paid(enrollmentDate.isPaid())
                 .confirmEnrollment(enrollmentDate.isConfirmEnrollment())
                 .confirmDate(enrollmentDate.getConfirmDate())
-                .enrollment(enrollmentDate.getEnrollment())
+                .enrollment(enrollmentDate.isEnrollment())
                 .orderNum(enrollmentDate.getOrderNum())
                 .orderDate(enrollmentDate.getOrderDate())
                 .protocolNum(enrollmentDate.getProtocolNum())
